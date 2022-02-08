@@ -1,0 +1,6 @@
+Come up with a plan to allocate the work among your team members. For example, you might decide that one student will write the first draft of the algorithms, another will check them and write tests, and the third can implement them in Python. Or you might have one student solve problem 1, another solve problem 2, and the third do the testing for both.
+Write an algorithm to solve each problem and create either pseudocode or a flowchart to represent each algorithm.
+Draw up your testing plans.
+Complete the programs so that they solve each problem by calling the provided functions in the correct order.
+Test your code and document the test results
+Adjust the scripts as needed until the tests produce the expected output
