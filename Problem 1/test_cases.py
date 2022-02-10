@@ -1,0 +1,16 @@
+test_data_1 = [2,4]
+# Expected Mean Output = 0.0
+# Expected Greatest Output = 1.0
+# Expected Least Output = -1.0
+test_data_2 = [6, 7, 7, 12, 13, 13, 15, 16, 19, 22]
+# Expected Mean Output = 0.0
+# Expected Greatest Output = 1.79
+# Expected Least Output = -1.39
+test_data_3 = [5, 6, 7, 7, 8]
+# Expected Mean Output = 0.0
+# Expected Greatest Output = 1.37
+# Expected Least Output = -1.57
+test_data_4 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# Expected Mean Output = 0.0
+# Expected Greatest Output = 1.65
+# Expected Least Output = -1.65
