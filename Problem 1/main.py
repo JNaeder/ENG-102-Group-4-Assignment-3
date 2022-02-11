@@ -1,11 +1,11 @@
 #Assignment 3 Problem 1: Z-score
 
 #Data set: a list of integers
-population = [14, 28, 96, 97, 21, 29, 29, 4, 58, 
-			42, 25, 97, 49, 33, 75, 53, 14, 53, 
-			45, 87, 75, 66, 62, 55, 57, 44, 44, 
-			94, 19, 96, 12, 59, 86, 88, 61, 68, 
-			37, 64, 19, 46, 68, 98, 19, 54, 65, 
+population = [14, 28, 96, 97, 21, 29, 29, 4, 58,
+			42, 25, 97, 49, 33, 75, 53, 14, 53,
+			45, 87, 75, 66, 62, 55, 57, 44, 44,
+			94, 19, 96, 12, 59, 86, 88, 61, 68,
+			37, 64, 19, 46, 68, 98, 19, 54, 65,
 			30, 1, 82, 76, 3]
 
 def mean(data_set):
@@ -22,16 +22,16 @@ def stdev(data_set, avg):
 	**Do not change this function**
 	"""
 	variance = sum([(integer - avg) ** 2 for integer in data_set])/len(data_set)
-	# return the square root of the variance calculation 
+	# return the square root of the variance calculation
 	return variance ** .5
-	
+
 def least(data_set):
 	"""
 	returns the least value in the data_set(population)
 	**Do not change this function**
 	"""
 	return min(data_set)
-	
+
 def greatest(data_set):
 	"""
 	returns the greatest value in the data_set(population)
@@ -48,16 +48,19 @@ def greatest(data_set):
 # i.e. +, -, *, **, /					#
 #########################################
 
-def z_score():
-	"""
-	"""
-	return
+def z_score(value):
+	score = value
+	return score
 
 
-# Call z_score() with necessary arguments to get the z-score for: 
+# Call z_score() with necessary arguments to get the z-score for:
 # 1. the mean of the population list,
-mean_z_score = z_score()
+mean_z_score = z_score(mean(population))
 # 2. the greatest value in the population list,
-greatest_z_score = z_score()
+greatest_z_score = z_score(greatest(population))
 # 3. the least value in the population list.
-least_z_score = z_score()
+least_z_score = z_score(least(population))
+
+print("Mean Z-Score = "+ str(mean_z_score))
+print("Greates Z-Score = "+ str(greatest_z_score))
+print("Least Z-Score = "+ str(least_z_score))
