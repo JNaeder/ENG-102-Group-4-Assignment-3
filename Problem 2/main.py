@@ -65,18 +65,20 @@ def count_tests(test_results):
 #You may also use arithmetic operators, #
 # i.e. +, -, *, **, /					#
 #########################################
-def calc_pos_pred_value():
-	"""
-	"""
-	return 
+def calc_pos_pred_value(result_type, test_results):
+    positives = count_positives(test_results)
+    accurate = count_accurate(result_type, test_results)
+    pos_pred = accurate / positives
+    return pos_pred
 
-def calc_neg_pred_value():
-	"""
-	"""
-	return
+def calc_neg_pred_value(result_type, test_results):
+    negatives = count_negatives(test_results)
+    inaccurate = count_inaccurate(result_type, test_results)
+    neg_pred = inaccurate / negatives
+    return neg_pred
 
 # Call calc_pos_pred_value() and calc_neg_pred_value() with the necessary arguments.
 # The necessary arguments should be values returned from other functions, 
 #   based on the tuple(test cases) of diagnoses.
-positive_predictive_value = calc_pos_pred_value()
-negative_predictive_value = calc_neg_pred_value()
+positive_predictive_value = calc_pos_pred_value(True, diagnoses)
+negative_predictive_value = calc_neg_pred_value(False, diagnoses)
