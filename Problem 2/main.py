@@ -73,8 +73,8 @@ def calc_pos_pred_value(result_type, test_results):
 
 def calc_neg_pred_value(result_type, test_results):
     negatives = count_negatives(test_results)
-    inaccurate = count_inaccurate(result_type, test_results)
-    neg_pred = inaccurate / negatives
+    accurate = count_accurate(result_type, test_results)
+    neg_pred = accurate / negatives
     return neg_pred
 
 # Call calc_pos_pred_value() and calc_neg_pred_value() with the necessary arguments.
