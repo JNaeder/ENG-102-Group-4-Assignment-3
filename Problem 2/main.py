@@ -57,14 +57,6 @@ def count_tests(test_results):
 	"""
 	return len(test_results)
 
-#########################################
-#Complete the following two functions.	#
-#You may call the functions above,		#
-# but do not define any new functions.	#
-#You will need to add parameters.		#
-#You may also use arithmetic operators, #
-# i.e. +, -, *, **, /					#
-#########################################
 def calc_pos_pred_value(result_type, test_results):
     positives = count_positives(test_results)
     accurate = count_accurate(result_type, test_results)
@@ -77,8 +69,36 @@ def calc_neg_pred_value(result_type, test_results):
     neg_pred = accurate / negatives
     return neg_pred
 
-# Call calc_pos_pred_value() and calc_neg_pred_value() with the necessary arguments.
-# The necessary arguments should be values returned from other functions, 
-#   based on the tuple(test cases) of diagnoses.
+
+# TEST CASES
+
+print("\n----------Test Data 1----------")
+test_data_1 = [(True, True),(True, False),(False, True),(False, False)]
+print("Expected Positive Predictive Output = 0.5: Actual Output = " + str(calc_pos_pred_value(True, test_data_1))) #Expected output = 0.5
+print("Expected Negative Predictive Output = 0.5: Actual Output = " + str(calc_neg_pred_value(False, test_data_1))) #Expected output = 0.5
+
+print("\n----------Test Data 2----------")
+test_data_2 = [(True, True),(True, True),(False, True),(False, True)]
+print("Expected Positive Predictive Output = 1: Actual Output = " + str(calc_pos_pred_value(True, test_data_2))) #Expected output = 1
+print("Expected Negative Predictive Output = 1: Actual Output = " + str(calc_neg_pred_value(False, test_data_2))) #Expected output = 1
+
+print("\n----------Test Data 3----------")
+test_data_3 = [(True, False),(True, False),(False, False),(False, False)]
+print("Expected Positive Predictive Output = 0: Actual Output = " + str(calc_pos_pred_value(True, test_data_3))) #Expected output = 0
+print("Expected Negative Predictive Output = 0: Actual Output = " + str(calc_neg_pred_value(False, test_data_3))) #Expected output = 0
+
+print("\n----------Test Data 4----------")
+test_data_4 =   [(True, True),(True, True),(True, True),(True, False),(False, True),(False, True),(False, True),
+				(False, False),(True, True),(True, True),(True, True),(True, False),(False, True),(False, True),
+				(False, True),(False, False),(True, True),(True, True),(True, True),(True, False),(False, True),
+				(False, True),(False, False),(False, False),(True, True),(True, True),(True, True),(True, False),
+				(False, False),(False, False),(False, False),(False, False)]
+print("Expected Positive Predictive Output = 0.75: Actual Output = " + str(calc_pos_pred_value(True, test_data_4))) #Expected output = 0.75
+print("Expected Negative Predictive Output = 0.5: Actual Output = " + str(calc_neg_pred_value(False, test_data_4))) #Expected output = 0.5
+
+print("\n----------Real Data----------")
 positive_predictive_value = calc_pos_pred_value(True, diagnoses)
 negative_predictive_value = calc_neg_pred_value(False, diagnoses)
+print("Positive Predictive Value = " + str(positive_predictive_value))
+print("Negative Predictive Value = " + str(negative_predictive_value))
+print("")

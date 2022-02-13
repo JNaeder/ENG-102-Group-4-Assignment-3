@@ -60,15 +60,6 @@ def z_score(data_point, data_set):
     return zscore
 
 
-# Call z_score() with necessary arguments to get the z-score for:
-# 1. the mean of the population list,
-mean_z_score = z_score(mean(population), population)
-# 2. the greatest value in the population list,
-greatest_z_score = z_score(greatest(population), population)
-# 3. the least value in the population list.
-least_z_score = z_score(least(population), population)
-
-
 # TEST CASES
 
 print("\n----------Test 1----------")
@@ -94,3 +85,12 @@ test_data_4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 print("Expected Mean Output = 0 : Actual Mean Output = " + str(z_score(mean(test_data_4), test_data_4)))
 print("Expected Greatest Output = 1.65 : Actual Greatest Output = " + str(z_score(greatest(test_data_4), test_data_4)))
 print("Expected Least Output = -1.65 : Actual Least Output = " + str(z_score(least(test_data_4), test_data_4)))
+
+print("\n----------Real Data----------")
+mean_z_score = z_score(mean(population), population)
+greatest_z_score = z_score(greatest(population), population)
+least_z_score = z_score(least(population), population)
+print("Mean Z-Score = " + str(mean_z_score))
+print("Greatest Z-Score = " + str(greatest_z_score))
+print("Least Z-Score = " + str(least_z_score))
+print("")
