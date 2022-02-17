@@ -58,12 +58,18 @@ def count_tests(test_results):
 	return len(test_results)
 
 def calc_pos_pred_value(result_type, test_results):
+    """
+	Returns positive predicitive value given the True result type and the data set as input.
+	"""
     positives = count_positives(test_results)
     accurate = count_accurate(result_type, test_results)
     pos_pred = accurate / positives
     return pos_pred
 
 def calc_neg_pred_value(result_type, test_results):
+    """
+	Returns positive predicitive value given the True result type and the data set as input.
+	"""
     negatives = count_negatives(test_results)
     accurate = count_accurate(result_type, test_results)
     neg_pred = accurate / negatives

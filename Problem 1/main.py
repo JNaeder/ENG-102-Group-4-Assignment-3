@@ -54,6 +54,9 @@ def greatest(data_set):
 #########################################
 
 def z_score(data_point, data_set):
+    """
+    Returns the Z-score when given a single data point and a whole data set as input.
+    """
     mean_of_set = mean(data_set)
     standard_deviation = stdev(data_set, mean_of_set)
     zscore = (data_point - mean_of_set) / standard_deviation
