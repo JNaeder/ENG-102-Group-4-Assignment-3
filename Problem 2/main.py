@@ -68,7 +68,7 @@ def calc_pos_pred_value(result_type, test_results):
 
 def calc_neg_pred_value(result_type, test_results):
     """
-	Returns positive predicitive value given the True result type and the data set as input.
+	Returns negative predicitive value given the True result type and the data set as input.
 	"""
     negatives = count_negatives(test_results)
     accurate = count_accurate(result_type, test_results)
